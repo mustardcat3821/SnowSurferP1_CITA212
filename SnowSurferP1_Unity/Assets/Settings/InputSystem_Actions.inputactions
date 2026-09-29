@@ -18,12 +18,12 @@
                 },
                 {
                     "name": "Jump",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "fe4686a4-5f5a-4853-9810-14040af87490",
-                    "expectedControlType": "",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false,
+                    "initialStateCheck": true,
                     "priority": 0
                 }
             ],

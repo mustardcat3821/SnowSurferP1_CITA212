@@ -10,12 +10,20 @@ public class FinishLine : MonoBehaviour
 
         if (collision.gameObject.layer == layerIndex)
         {
-            Invoke("ReloadScene", reloadDelay);
+            Invoke("LoadNextScene", reloadDelay);
         }
     }
 
-    private void ReloadScene()
+    private void LoadNextScene()
     {
-        SceneManager.LoadScene(0);
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        int nextSceneIndex = currentSceneIndex + 1;
+
+        if (nextSceneIndex >= SceneManager.sceneCountInBuildSettings)
+        {
+            nextSceneIndex = 0;
+        }
+
+        SceneManager.LoadScene(nextSceneIndex);
     }
 }
