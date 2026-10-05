@@ -6,11 +6,13 @@ public class playerController : MonoBehaviour
     [SerializeField] float torqueAmount = 1f;
     [SerializeField] float baseSpeed = 20;
     [SerializeField] float boostSpeed = 28;
+
     InputAction moveAction;
     Rigidbody2D myRigidBody2D;
     SurfaceEffector2D mySurfaceEffector2D;
 
     Vector2 moveInput;
+    bool canControlPlayer = true;
 
     void Start()
     {
@@ -24,8 +26,11 @@ public class playerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rotatePlayer();
-        boostPlayer();
+        if (canControlPlayer)
+        {
+            rotatePlayer();
+            boostPlayer();
+        }
     }
 
     void rotatePlayer()
@@ -56,4 +61,9 @@ public class playerController : MonoBehaviour
         }
 
     }
+    public void disableControls()
+    {
+        canControlPlayer = false;
+    }
+
 }
