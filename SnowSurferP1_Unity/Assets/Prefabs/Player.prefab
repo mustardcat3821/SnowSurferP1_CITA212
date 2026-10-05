@@ -4981,7 +4981,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 10
-  m_GravityScale: 0.9
+  m_GravityScale: 1.125
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -5042,7 +5042,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14da3ed1600a6184482c4dedc8f0996c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::playerController
-  torqueAmount: 5
+  torqueAmount: 8
 --- !u!58 &2342745180042079590
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5091,5 +5091,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03e483f2116b7854890b8c941ba9b941, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CrashDetector
-  reloadDelay: 2
+  reloadDelay: 1
   crashParticle: {fileID: 2711169879246543521}
