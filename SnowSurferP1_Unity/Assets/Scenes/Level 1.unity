@@ -1185,7 +1185,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 16.932232
+  orthographic size: 16
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1723,7 +1723,7 @@ MonoBehaviour:
     CustomLookAtTarget: 0
   Lens:
     FieldOfView: 34
-    OrthographicSize: 16.932232
+    OrthographicSize: 16
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -3215,6 +3215,10 @@ PrefabInstance:
     - target: {fileID: 1246552994602992595, guid: 46f6bf9ae89022643ba3f347e2409907, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4957650873278109901, guid: 46f6bf9ae89022643ba3f347e2409907, type: 3}
+      propertyPath: boostSpeed
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 4957650873278109901, guid: 46f6bf9ae89022643ba3f347e2409907, type: 3}
       propertyPath: torqueAmount
