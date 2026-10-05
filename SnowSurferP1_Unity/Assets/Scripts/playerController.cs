@@ -10,12 +10,12 @@ public class playerController : MonoBehaviour
     InputAction moveAction;
     Rigidbody2D myRigidBody2D;
     SurfaceEffector2D mySurfaceEffector2D;
+    ScoreManager scoreManager;
 
     Vector2 moveInput;
     bool canControlPlayer = true;
     float previousRotation;
     float totalRotation;
-    int flipCount;
 
     void Start()
     {
@@ -23,6 +23,7 @@ public class playerController : MonoBehaviour
         myRigidBody2D = GetComponent<Rigidbody2D>();
         mySurfaceEffector2D = FindAnyObjectByType<SurfaceEffector2D>();
         moveAction.Enable();
+        scoreManager = FindAnyObjectByType<ScoreManager>();
 
     }
 
@@ -74,9 +75,8 @@ public class playerController : MonoBehaviour
 
         if (totalRotation > 340 || totalRotation < -340)
         {
-            flipCount += 1;
             totalRotation = 0f;
-            print(flipCount);
+            scoreManager.addScore(100);
         }
 
         previousRotation = currentRotation;
