@@ -87,5 +87,32 @@ public class playerController : MonoBehaviour
         canControlPlayer = false;
     }
 
-    
+    public void activatePowerUp(PowerUpSO powerUp)
+    {
+       if (powerUp.getPowerUpType() == "Speed")
+        {
+            baseSpeed += powerUp.getValueChange();
+            boostSpeed += powerUp.getValueChange();
+        }
+
+       else if (powerUp.getPowerUpType() == "Torque")
+        {
+            torqueAmount += powerUp.getValueChange();
+        }
+    }
+
+    public void deactivatePowerUp(PowerUpSO powerUp)
+    {
+        if (powerUp.getPowerUpType() == "Speed")
+        {
+            baseSpeed -= powerUp.getValueChange();
+            boostSpeed -= powerUp.getValueChange();
+        }
+
+        else if (powerUp.getPowerUpType() == "Torque")
+        {
+            torqueAmount -= powerUp.getValueChange();
+        }
+    }
+
 }
