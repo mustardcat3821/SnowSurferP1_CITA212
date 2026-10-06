@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 6e6821061dea75a4c8203e3ea952ae11
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - scoreCanvas: {instanceID: 0}
+  - dinoSprite: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -468,11 +468,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_NormalColor: {r: 0.5568628, g: 0.8117648, b: 0.28627452, a: 1}
+    m_HighlightedColor: {r: 0.6949589, g: 0.899371, b: 0.47796756, a: 1}
+    m_PressedColor: {r: 0.41363257, g: 0.654088, b: 0.15837973, a: 1}
+    m_SelectedColor: {r: 0.6927304, g: 0.91823894, b: 0.45334435, a: 1}
+    m_DisabledColor: {r: 0.22342147, g: 0.3584906, b: 0.08004032, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -490,7 +490,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 340792080}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 393403498}
+        m_TargetAssemblyTypeName: CharSelectManager, Assembly-CSharp
+        m_MethodName: chooseFrog
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &340792080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -680,7 +692,7 @@ GameObject:
   - component: {fileID: 393403496}
   - component: {fileID: 393403495}
   - component: {fileID: 393403494}
-  - component: {fileID: 393403493}
+  - component: {fileID: 393403498}
   m_Layer: 5
   m_Name: CharSelectCanvas
   m_TagString: Untagged
@@ -688,19 +700,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &393403493
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 393403492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f77877e0ec3e614eab7b274da481307, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ScoreManager
-  scoreText: {fileID: 0}
 --- !u!114 &393403494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -786,6 +785,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &393403498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393403492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e6821061dea75a4c8203e3ea952ae11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CharSelectManager
+  scoreCanvas: {fileID: 755321286}
+  dinoSprite: {fileID: 1939778056}
+  frogSprite: {fileID: 1261251146}
 --- !u!1 &408088280
 GameObject:
   m_ObjectHideFlags: 0
@@ -2469,7 +2483,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &755321287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2517,7 +2531,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 755321286}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -3118,6 +3132,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1200559523}
   m_CullTransparentMesh: 1
+--- !u!1 &1261251146 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4743115821875309172, guid: 46f6bf9ae89022643ba3f347e2409907, type: 3}
+  m_PrefabInstance: {fileID: 1939778055}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1312517174
 GameObject:
   m_ObjectHideFlags: 0
@@ -3731,11 +3750,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_NormalColor: {r: 0.14901961, g: 0.7686275, b: 0.654902, a: 1}
+    m_HighlightedColor: {r: 0.34709847, g: 0.9433962, b: 0.8339491, a: 1}
+    m_PressedColor: {r: 0.12855497, g: 0.6289307, b: 0.5370895, a: 1}
+    m_SelectedColor: {r: 0.26579243, g: 0.9496855, b: 0.82416075, a: 1}
+    m_DisabledColor: {r: 0.059491273, g: 0.40251565, b: 0.3395554, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -3753,7 +3772,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1694590499}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 393403498}
+        m_TargetAssemblyTypeName: CharSelectManager, Assembly-CSharp
+        m_MethodName: chooseDino
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1694590499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4319,6 +4350,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1519658179652791193, guid: 46f6bf9ae89022643ba3f347e2409907, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4127858637159926108, guid: 46f6bf9ae89022643ba3f347e2409907, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4743115821875309172, guid: 46f6bf9ae89022643ba3f347e2409907, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4957650873278109901, guid: 46f6bf9ae89022643ba3f347e2409907, type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 755321291}
+    - target: {fileID: 6857153543487728458, guid: 46f6bf9ae89022643ba3f347e2409907, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8601220925130763036, guid: 46f6bf9ae89022643ba3f347e2409907, type: 3}
       propertyPath: m_Name
       value: Player
@@ -4328,6 +4379,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46f6bf9ae89022643ba3f347e2409907, type: 3}
+--- !u!1 &1939778056 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1519658179652791193, guid: 46f6bf9ae89022643ba3f347e2409907, type: 3}
+  m_PrefabInstance: {fileID: 1939778055}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1945531280
 GameObject:
   m_ObjectHideFlags: 0

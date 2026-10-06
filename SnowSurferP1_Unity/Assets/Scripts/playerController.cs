@@ -7,11 +7,11 @@ public class playerController : MonoBehaviour
     [SerializeField] float baseSpeed = 20;
     [SerializeField] float boostSpeed = 28;
     [SerializeField] ParticleSystem powerUpParticles;
+    [SerializeField] ScoreManager scoreManager;
 
     InputAction moveAction;
     Rigidbody2D myRigidBody2D;
     SurfaceEffector2D mySurfaceEffector2D;
-    ScoreManager scoreManager;
 
     Vector2 moveInput;
     bool canControlPlayer = true;
@@ -25,7 +25,6 @@ public class playerController : MonoBehaviour
         myRigidBody2D = GetComponent<Rigidbody2D>();
         mySurfaceEffector2D = FindAnyObjectByType<SurfaceEffector2D>();
         moveAction.Enable();
-        scoreManager = FindAnyObjectByType<ScoreManager>();
 
     }
 
